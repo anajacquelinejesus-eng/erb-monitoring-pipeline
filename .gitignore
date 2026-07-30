@@ -1,0 +1,36 @@
+# Dados (arquivos grandes, não versionar)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Ambiente Python
+venv/
+env/
+__pycache__/
+*.pyc
+.venv/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
+checkpoint/
+
+# Variáveis de ambiente / credenciais
+.env
+*.env
+secrets.*
+
+# Docker
+docker-compose.override.yml
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
