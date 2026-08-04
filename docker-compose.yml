@@ -38,11 +38,13 @@ services:
     image: postgres:16
     container_name: erb-postgres
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       POSTGRES_USER: erb_admin
       POSTGRES_PASSWORD: erb_pass
       POSTGRES_DB: erb_monitoring
+      POSTGRES_HOST_AUTH_METHOD: md5
+      POSTGRES_INITDB_ARGS: "--auth-host=md5"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
